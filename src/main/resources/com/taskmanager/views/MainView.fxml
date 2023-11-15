@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.taskmanager.views.MainViewController">
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem text="Exit" onAction="#handleExit"/>
+        </Menu>
+        <Menu text="Help">
+            <MenuItem text="About" onAction="#handleAbout"/>
+        </Menu>
+    </MenuBar>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Task" onAction="#handleAddTask"/>
+        <Button text="Edit Task" onAction="#handleEditTask"/>
+        <Button text="Delete Task" onAction="#handleDeleteTask"/>
+    </HBox>
+    <TableView fx:id="taskTable">
+        <columns>
+            <TableColumn text="Title" />
+            <TableColumn text="Description" />
+            <TableColumn text="Due Date" />
+            <TableColumn text="Status" />
+        </columns>
+    </TableView>
+</VBox>
